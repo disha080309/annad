@@ -1,0 +1,124 @@
+<html>
+<head>
+
+	<title>Anna-Daan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+
+  <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="main.js"> </script>
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("r1rrxXOg2bmNuwhMk");
+   })();
+</script>
+</head>
+    <body>
+      <div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#donate"> Donate Food</a></li>
+            <li><a href="#map">Map & Feedback</a></li>
+        </ul>
+        
+    <div id="home">
+        <div class="annoucement">
+            <marquee id="marqueeStyle">
+                ****Don’t waste food. It is like wasting one of the most precious things given by God to us.  ****
+            </marquee>
+        </div>
+        <span>
+            <br>
+            <center>
+            <button id="img_btn">
+        <img src="WhatsApp Image 2022-07-19 at 8.38.52 PM.jpeg" id="img1">
+             </button>
+            </center>
+            <h1 id="title">Anna Daan:Save Food With A Tap  </h1>
+        
+    </span> 
+        <h1 id="annam">"Annam Para Brahma Swarupam;
+            Anna Daanam Mahaa Daanam"</h1>  
+    </div>
+    <div id="donate">
+      <br><br><br>
+      <center>
+          <label id="info"> Click On The Image To Donate Food In NGO🠋🠋</label>
+          <br><br>
+         <!-- Trigger the modal with a button -->
+        <img src="istockphoto-1224414210-612x612.jpg" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
+      </center>
+      </div>
+<br> <br> <br> <br>
+    <div id="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d23331614.42567751!2d61.7176880622061!3d16.209604853180938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sngo%20in%20india!5e0!3m2!1sen!2sin!4v1660747391166!5m2!1sen!2sin" width="50%" height="100%" style="border:10 black double;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="feedback"></iframe>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe2B7u-Lhlj2L922cm0VJT8oySGGoX-GCt5fZfb7bqEBJk-Ow/viewform?embedded=true" width="40%" align="right" height="100%" frameborder="0" marginheight="0" marginwidth="0" id="m">Loading…</iframe>
+    </div>
+
+
+
+   
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h1 class="modal-title" id="df">Donation Form</h1>
+      </div>
+      <div class="modal-body" id="dff">
+        <h4>Please Fill This Form To Donate Food</h4>
+
+        <!-- Put the labes the text inputs everything here -->
+        <label id="lbl-name">Name</label>
+        <input type="text" id="name" class="form-control" placeholder="Please Enter Your Name">
+        <br>
+        <label id="lbl-add">Address</label>
+        <input type="text" id="add" class="form-control" placeholder="Please Enter Your Address">
+        <br>
+        <label id="lbl-fd">Food Details </label>
+        <input type="text" id="fd" class="form-control" placeholder="Please Enter Little Bit Info About Food That You Want To Donate">
+        <br><br>
+        <label id="lbl-ngo">Please Select The NGO </label>
+        <br>
+        <select name="NGOs" id="ngo"  onchange="select_NGO()" class="btn-info">
+          <option id="op1" value="">--Select NGO--</option>
+          <option value="poojabhay82@gmail.com">try</option>
+          <option value="spsloha@gmail.com">UNNATISHEEL MAHILA MANDAL</option>
+          <option value="rsg1994@gmail.com">MS RENUKA MAHAJAN TRUST</option>
+          <option value="vatsalyatrustmumbaiadoption@gmail.com">VATSALYA TRUST</option>
+          <option value="snssudgir@yahoo.com">SANDHI NIKETAN SHIKSHAN SANSTHA</option>
+          <option value="adharashram_rahul@rediffmail.com">ADHARASHRAM</option>
+          <option value="vatsalyatrustalibag@gmail.com">VASTLAYA TRUST MUMBAI SANCH SHISHUGRIH ALIBAG</option>
+          <option value="vishwabalak1997@gmail.com">CHILDREN OF THE WORLD INDIA TRUST</option>
+          <option value="harshawardhanagashe@rediffmail.com">YASHODHAM CHILD CARE CENTRE</option>
+          <option value="vivekanandbalsadan@rediffmail.com">SIR KASTURCHAND DAGA BAL SADAN KAMPTE</option>
+          <option value="patel_ngo@rediffmail.com">PATEL BAHUUDHESHYA SHIKSHAN SANSTHAN</option>
+        </select>
+        <br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" id="cancel">Cancel</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" id="submit" onclick="submit_form()">Submit</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+   
+</div>
+</body>
+</html>
